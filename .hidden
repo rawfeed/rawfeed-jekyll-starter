@@ -1,6 +1,7 @@
 node_modules
 tools
 blog
+pixels
 Gemfile
 Gemfile.lock
 404.html

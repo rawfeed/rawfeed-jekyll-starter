@@ -40,11 +40,9 @@ function showMenu() {
   pixels:enable ------------ Enable the Pixels
   clean:cache -------------- Remove cache Jekyll
   clean:all ---------------- Remove ALL dependencies and builds from the website
-  publish:gem -------------- Publish the gem on ${kleur.underline('https://rubygems.org')} ${kleur.yellow('[for developer]')}
-  generate:gem ------------- Create gem '${projectName}' ${kleur.yellow('[for developer]')}
   help --------------------- Print this menu
 
-  ${kleur.gray(`© ${projectName} 2025`)}
+  ${kleur.gray(`© ${projectName} 2025 - https://rawfeed.github.io`)}
   `;
 
   console.log(menuText);
