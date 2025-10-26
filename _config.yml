@@ -1,8 +1,8 @@
 # [ important!!! ] the base hostname & protocol for your site, e.g. http://example.com
-url: "https://rawfeed.github.io"
+url: ""
 
 # the subpath of your site, e.g. /blog
-baseurl: "/rawfeed-jekyll/preview"
+baseurl: ""
 
 # ---------- CAUTION!!! DO NOT move from here unless you REALLY know what you are doing. -----------
 
