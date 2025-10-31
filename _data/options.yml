@@ -253,6 +253,11 @@ contact:
     fail: "Verification failed. Please reload the page and try again."
     error: "An error occurred while sending the message. Please try again."
 
+# section: [pub]
+pub:
+  path:
+    title: "Index of"
+
 # section: [footer]
 footer:
   top_button:
