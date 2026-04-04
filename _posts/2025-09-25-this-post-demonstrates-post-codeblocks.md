@@ -9,8 +9,6 @@ comments: true
 tags: [example,codeblocks,ruby,html,rust,raw]
 ---
 
-{% include toc selector=".post-content" max_level=3 title="TOC" btn_hidden="Hidden" btn_show="Show" %}
-
 # Blockcodes
 
 An article with various blocks of highlighted code snippets.
