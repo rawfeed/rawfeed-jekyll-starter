@@ -222,8 +222,11 @@ pixels:
   title: "pixels"
   layout:
     width: 860 # default: 860
+
 # section: [page]
 page:
+  toc:
+    title: "Table of Contents"
   updated_on: "Page updated on"
   error:
     image: https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXlxYzc5eXp1Nm01cmtldzM5bHhwdzJ2Njk2c2E4b2RkdTBkeGs5eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/c20UV66B7zCWA/giphy.gif
@@ -281,3 +284,45 @@ footer:
     page_url: "/licenses/"
   message: |
     Your impactful phrase!
+
+# section: [donation]
+# Tip: use svg images for better quality (https://www.iconpacks.net)
+donation:
+  title: "Support the Project"
+  description: "If this project helps you, consider supporting it"
+  copy_button:
+    text: "Copy"
+    clicked: "Copied!"
+  services:
+    - name: pix
+      logo: "/assets/images/icons/pix.svg"
+      description: |
+        Make your donation using PIX from Brazil. Use the key below.
+      address: "00b53f61-b009-4f05-8c43-444cce86af1d"
+      qrcode: "/assets/images/qrcode_inter.jpg"
+
+    - name: card
+      logo: "/assets/images/icons/card.svg"
+      description: |
+        Donation using card through the service `Buy Me a Coffee`.
+      address: "https://buymeacoffee.com/williamcanin"
+
+    - name: paypal
+      logo: "/assets/images/icons/paypal.svg"
+      description: |
+        Donate quickly and securely using your PayPal balance or linked card.
+      address: "https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=YBK2HEEYG8V5W&source=&ssrt=1775261628264"
+
+    - name: bitcoin (lightning network)
+      logo: "/assets/images/icons/lightning_network.svg"
+      description: |
+        Make an anonymous Bitcoin donation using a Lightning Address.
+      address: "williamcanin@walletofsatoshi.com"
+      qrcode: "/assets/images/qrcode_wos.jpg"
+
+    - name: bitcoin (on-chain)
+      logo: "/assets/images/icons/bitcoin.svg"
+      description: |
+        Make an anonymous Bitcoin donation using a On-Chain address (Binance).
+      address: "bc1qluh2mrchmtrwedspwhtta8ccgzsl9jqdr47f2p"
+      qrcode: "/assets/images/qrcode_btc_binance.jpg"
