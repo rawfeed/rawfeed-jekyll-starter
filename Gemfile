@@ -3,7 +3,8 @@
 source "https://rubygems.org"
 
 gem "rake", "~> 13.0"
-gem "rawfeed", "~> 0.3.1"
+gem "rubyzip", "~> 2.3"
+gem "rawfeed", "~> 1.0.1"
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.

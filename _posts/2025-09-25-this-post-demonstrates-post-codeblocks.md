@@ -1,19 +1,24 @@
 ---
-layout: post
+layout: blog/post
 title: "Codeblocks - Demonstration in the post"
 description: "This post demonstrates post codeblock"
 author: "William Canin"
 date: 2025-09-25 10:36:34 -0300
 update_date: 2025-09-28 07:16:01 -0300
 comments: true
-tags: [example,codeblocks,ruby,html,rust,raw]
+tags: [example, codeblocks, ruby, html, rust, raw]
+toc:
+  enable: true
 ---
 
-# Blockcodes
+> Note: This post create with command: `bundle exec rawfeed create:draft`
+> And then using the: `bundle exec rawfeed post:draft`
+
+# Block codes
 
 An article with various blocks of highlighted code snippets.
 
-## HTML code using crase ` ` `
+## HTML code using crasis ` ` `
 
 ```html
 <html>
@@ -24,14 +29,14 @@ An article with various blocks of highlighted code snippets.
 </html>
 ```
 
-## Ruby code using crase ` ` `
+## Ruby code using crasis ` ` `
 
 ```ruby
 include Enumerable
 
 module Foo
   class Bar
-    LIPSUM = "lorem ipsum dolor sit"
+    LOREM = "lorem ipsum dolor sit"
 
     attr_reader :layout
 
@@ -43,7 +48,7 @@ module Foo
     def profile
       measure_time do
         compile layout
-        layout.render_with Bar::LIPSUM
+        layout.render_with Bar::LOREM
       end
     rescue ArgumentError
       false
@@ -55,7 +60,7 @@ end
 Foo::Bar.new.profile
 ```
 
-## Sass code using crase ` ` `
+## Sass code using crasis ` ` `
 
 ```sass
 @import "base"
@@ -74,7 +79,7 @@ Foo::Bar.new.profile
 {% raw %}
 
 ```liquid
-{% assign foo = page.foo | bar: 'baz' %}
+{%- assign foo = page.foo | bar: 'baz' -%}
 {{ foo }}
 ```
 
@@ -105,32 +110,32 @@ use std::collections::HashMap;
 
 fn main() {
 
-  let workflow: HashMap<&str, HashMap<&str, Vec<&str>>> = HashMap::from([
-    (
-      "My Main Tech Stack",
-      HashMap::from([
-        ("Languages", vec!["Rust", "Python", "Shell Script"]),
-        ("Frontend", vec!["HTML", "CSS", "SASS", "Bootstrap", "Jekyll"]),
-        ("Database", vec!["PostGreSQL", "MySQL"]),
-        ("Tools", vec!["VSCode", "Vim", "JetBrains IDEs", "Git"]),
-        ("OS", vec!["Linux", "Windows"]),
-      ]),
-    ),
-  ]);
+let workflow: HashMap<&str, HashMap<&str, Vec<&str>>> = HashMap::from([
+(
+"My Main Tech Stack",
+HashMap::from([
+("Languages", vec!["Rust", "Python", "Shell Script"]),
+("Frontend", vec!["HTML", "CSS", "SASS", "Bootstrap", "Jekyll"]),
+("Database", vec!["PostGreSQL", "MySQL"]),
+("Tools", vec!["VSCode", "Vim", "JetBrains IDEs", "Git"]),
+("OS", vec!["Linux", "Windows"]),
+]),
+),
+]);
 
-  let yt_link: &str = "https://www.youtube.com/c/williamcanin";
+let yt_link: &str = "https://www.youtube.com/c/williamcanin";
 
-  println!("Hello, World!");
-  println!("My name is William, and I am a programming and hacking enthusiast.");
+println!("Hello, World!");
+println!("My name is William, and I am a programming and hacking enthusiast.");
 
-  for (key, value) in &workflow {
-    println!("{}:", key);
-    for (inner_key, inner_value) in value {
-        println!("  {}: {:?}", inner_key, inner_value);
-    }
-  }
+for (key, value) in &workflow {
+println!("{}:", key);
+for (inner_key, inner_value) in value {
+println!(" {}: {:?}", inner_key, inner_value);
+}
+}
 
-  println!("YouTube::> {}", yt_link);
+println!("YouTube::> {}", yt_link);
 
 }
 {% endhighlight %}

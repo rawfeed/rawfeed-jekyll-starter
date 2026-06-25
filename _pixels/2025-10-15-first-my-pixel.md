@@ -1,14 +1,18 @@
 ---
-layout: pixel
-author: "William Canin"
+layout: pixels/post
+author: "William C. Canin"
 title: "Luffy smiling"
 description: "Luffy is in a good mood"
 image:
   path: "/assets/images/pixels/luffy.jpg"
   caption: "Luffy, from the anime One Piece"
   width: 60%
+toc:
+  enable: false
 date: 2025-10-15 14:11:04 -0300
 ---
+
+> Note: This page create with command: `bundle exec rawfeed create:pixel`
 
 Monkey D. Luffy (/ˈluːfi/ LOO-fee) (Japanese: モンキー・D・ルフィ, Hepburn: Monkī Dī Rufi; [ɾɯꜜɸiː]),
 also known as "Straw Hat" Luffy,[n 2] is a fictional character and the protagonist of the Japanese
@@ -27,4 +31,4 @@ through different "Gears"; this is reflected in his bounty, which is used to mea
 poses to the World Government, which forbids piracy. Luffy clashes with the three kinds of great
 powers in One Piece: the World Government's Marines and its allied privateers known as the
 Seven Warlords of the Sea, and the most influential pirate captains known as the Four Emperors.
-[font](https://en.wikipedia.org/wiki/Monkey_D._Luffy){:target="_blank"}
+[font](https://en.wikipedia.org/wiki/Monkey_D._Luffy){:target="\_blank"}

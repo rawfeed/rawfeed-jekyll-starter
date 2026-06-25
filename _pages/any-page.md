@@ -1,22 +1,23 @@
 ---
-layout: blog/post
-title: "Content styles and Codeblocks - Demonstration in the post"
-description: "An example post for: Code Block and Styles"
-author: "William C. Canin"
-date: 2025-10-04 17:09:18 -0300
-update_date:
-comments: true
-tags: [example, codeblocks, style, include, chart, ruby, html, rust, raw]
+layout: page
+author: # "Your Name"
+title: "Any Page"
+order: 7
+emoji: 😁
+date: 2025-10-13 10:24:43 -0300
+update_date: 2025-10-14 08:17:11 -0300
+in_menu: true
+published: true
 toc:
   enable: true
+permalink: /any-page/
 ---
 
-> Note: This post create with command: `bundle exec rawfeed create:draft`
-> And then using the: `bundle exec rawfeed post:draft`
+> Note: This page create with command: `bundle exec rawfeed create:page`
 
 # Theology (h1)
 
-Lorem ipsum dolor sit amet, `consectetur` adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.
+**_Lorem ipsum_** dolor sit amet, `consectetur` adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, ~~bibendum in velit~~.
 
 ## Eschatology
 
@@ -55,6 +56,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eg
 3. Third item, what what?!
 4. Fourth item, fo sheezy my neezy
 5. Fifth item, nested!
+
+6. First item, yo
+7. Second item, dawg
+   1. Second Subnivel item, dawg
 
 ## List with subtitles
 
@@ -112,7 +117,7 @@ width="300"
 height="auto"
 border-radius="2"
 align="left"
-border-color="#858585" %}
+border-color="#000" %}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt.
 _Mauris lobortis nulla et felis ullamcorper bibendum._ Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
@@ -124,7 +129,8 @@ caption="Example animated GIF — © Giphy"
 width="300"
 height="auto"
 border-radius="2"
-align="right" %}
+align="right"
+border-color="#000" %}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt.
 _Mauris lobortis nulla et felis ullamcorper bibendum._ Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
@@ -137,7 +143,7 @@ width="100%"
 height="auto"
 border-radius="2"
 align="center"
-border-color="#46e038" %}
+border-color="#000" %}
 
 Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
 
@@ -145,7 +151,7 @@ Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum e
 
 > Note: You must copy the embed link
 
-{% include markdown/video title="Video" url="https://www.youtube.com/embed/xHusjrb_34A?si=th-S_gaVdKqtrJjj" %}
+{% include markdown/video title="Video" url="https://www.youtube.com/embed/IcICF_YF_tI?si=2n30rpxhzdEpZH4Y" %}
 
 # Tabs example
 
