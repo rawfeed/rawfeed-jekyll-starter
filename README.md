@@ -1,15 +1,6 @@
-# site
+# rawfeed-jekyll
 
-# Usage
+A starter project for [Rawfeed](https://rawfeed.github.io/rawfeed-jekyll) — a minimalist Jekyll theme.
 
-**(1)** - Install dependencies:
-
-```shell
-npm install
-```
-
-**(2)** - For manipulation commands, use:
-
-```shell
-npm run help
-```
+Access the official installation and usage page at:
+[https://rawfeed.github.io/rawfeed-jekyll](https://rawfeed.github.io/rawfeed-jekyll)
