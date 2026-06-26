@@ -10,6 +10,8 @@ services:
       # (prevents host bind mount from shadowing them)
       - /site/node_modules
       - /site/.bundle-cache
-    command: sh -c "npm install && npm run serve"
+    environment:
+      - JEKYLL_ENV=development
+    command: sh -c "npm install && npm run clean:cache && bundle exec jekyll serve --host 0.0.0.0 --port 4000 --drafts"
     stdin_open: true
     tty: true
