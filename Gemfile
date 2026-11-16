@@ -1,10 +1,18 @@
-# by rawfeed theme
-
 source "https://rubygems.org"
 
-gem "rake", "~> 13.0"
 gem "rubyzip", "~> 2.3"
-gem "rawfeed", "~> 1.0.1"
+
+group :jekyll_plugins do
+  gem "jekyll-polyglot", "~> 1.14"
+end
+
+rawfeed_dev_path = ENV["RAWFEED_DEV_PATH"] || File.expand_path("../rawfeed-jekyll", __dir__)
+
+if File.directory?(rawfeed_dev_path)
+  gem "rawfeed", path: rawfeed_dev_path
+else
+  gem "rawfeed", "~> 2.0.0"
+end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.

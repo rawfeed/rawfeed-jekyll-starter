@@ -70,15 +70,15 @@ if [ "$INSTALL_MODE" = "docker" ]; then
         error "Docker Compose (docker compose) is not available."
     fi
 else
-    command -v ruby >/dev/null 2>&1 || error "Ruby is not installed. Please install Ruby >= 3.2."
+    command -v ruby >/dev/null 2>&1 || error "Ruby is not installed. Please install Ruby >= 3.0."
     ruby_version=$(ruby --version 2>/dev/null | awk '{print $2}' | awk -F'[p-]' '{print $1}')
     ruby --version 2>/dev/null | awk '{
         split($2, v, /[p-]/)
         split(v[1], parts, ".")
         if (parts[1] > 3) exit 0
-        if (parts[1] == 3 && parts[2] >= 2) exit 0
+        if (parts[1] == 3 && parts[2] >= 0) exit 0
         exit 1
-    }' >/dev/null 2>&1 || error "Ruby version must be >= 3.2. Found: $ruby_version"
+    }' >/dev/null 2>&1 || error "Ruby version must be >= 3.0. Found: $ruby_version"
     ok "Ruby $ruby_version found"
 
     command -v gem >/dev/null 2>&1 || error "RubyGems (gem) is not installed."
@@ -89,6 +89,9 @@ else
 
     command -v npm >/dev/null 2>&1 || error "npm is not installed."
     ok "npm found"
+
+    command -v identify >/dev/null 2>&1 || error "ImageMagick is required for optimized production builds."
+    ok "ImageMagick found"
 
     if ! command -v bundler >/dev/null 2>&1; then
         info "Installing Bundler..."

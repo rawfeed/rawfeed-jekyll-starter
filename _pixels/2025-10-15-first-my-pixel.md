@@ -10,6 +10,7 @@ image:
 toc:
   enable: false
 date: 2025-10-15 14:11:04 -0300
+lang: en
 ---
 
 > Note: This page create with command: `bundle exec rawfeed create:pixel`

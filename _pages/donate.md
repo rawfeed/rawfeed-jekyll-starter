@@ -9,6 +9,7 @@ published: true
 toc:
   enable: false
 permalink: /donate/
+lang: en
 ---
 
 > Note: This page create with command: `bundle exec rawfeed restore:donate`

@@ -11,6 +11,7 @@ published: true
 toc:
   enable: true
 permalink: /any-page/
+lang: en
 ---
 
 > Note: This page create with command: `bundle exec rawfeed create:page`

@@ -7,6 +7,7 @@ description: |
   Here you can find post tags
 published: true
 permalink: /blog/tags/
+lang: en
 ---
 
 <!-- There is no need to put anything here -->

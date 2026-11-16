@@ -9,6 +9,7 @@ published: true
 toc:
   enable: false
 permalink: /resume/
+lang: en
 ---
 
 <!-- There is no need to put anything here -->

@@ -9,6 +9,7 @@ published: true
 toc:
   enable: false
 permalink: /contact/
+lang: en
 ---
 
 {%- include markdown/details summary="Other forms of contact" -%}

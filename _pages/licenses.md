@@ -7,6 +7,7 @@ published: true
 toc:
   enable: false
 permalink: /licenses/
+lang: en
 ---
 
 > NOTE: These licenses do not apply to this content, it is just an example.

@@ -9,6 +9,7 @@ published: true
 pagination:
   enabled: true
 permalink: /blog/
+lang: en
 ---
 
 <!-- There is no need to put anything here -->

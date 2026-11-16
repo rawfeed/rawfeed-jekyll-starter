@@ -1,81 +1,82 @@
 # frozen_string_literal: true
 
-require "colorize"
 require "rawfeed"
 
-# create
 namespace :create do
-  desc "Create new draft"
+  desc "Create a post draft"
   task :draft do
-    Rawfeed::Draft.draft_create
+    Rawfeed::CLI.run(["create:draft"])
   end
 
-  desc "Create new pixel"
-  task :pixel do
-    Rawfeed::Pixel.pixel_create
-  end
-
-  desc "Create new page"
+  desc "Create a page"
   task :page do
-    Rawfeed::Page.page_create
+    Rawfeed::CLI.run(["create:page"])
   end
 
-  desc "Create resume"
+  desc "Create a pixel post"
+  task :pixel do
+    Rawfeed::CLI.run(["create:pixel"])
+  end
+
+  desc "Restore the resume page"
   task :resume do
-    Rawfeed::Resume.resume_create
+    Rawfeed::CLI.run(["restore:resume"])
   end
 end
 
-# home
-namespace :home do
-  desc "Home page changed to 'about'"
-  task :about do
-    Rawfeed::Layout.home_about(true)
-  end
-  desc "Home page changed to 'blog'"
-  task :blog do
-    Rawfeed::Layout.home_blog
+namespace :restore do
+  desc "Restore the resume page"
+  task :resume do
+    Rawfeed::CLI.run(["restore:resume"])
   end
 end
 
-# post
 namespace :post do
-  desc "Move posts"
+  desc "Publish a selected draft"
   task :draft do
-    Rawfeed::Post.post
+    Rawfeed::CLI.run(["post:draft"])
   end
 end
 
-# blog
+namespace :move do
+  desc "Compatibility alias for publishing a selected draft"
+  task :posts do
+    Rawfeed::CLI.run(["post:draft"])
+  end
+end
+
+namespace :home do
+  desc "Set the home page to the profile"
+  task :about do
+    Rawfeed::CLI.run(["home:about"])
+  end
+
+  desc "Set the home page to the weblog"
+  task :blog do
+    Rawfeed::CLI.run(["home:blog"])
+  end
+end
+
 namespace :blog do
-  desc "Enable/Disable blog"
-  task :disable do
-    Rawfeed::Layout.change_yml("defaults", "published", false, "_posts")
-    Rawfeed::Layout.change_yml("pagination", "enabled", false)
-    Rawfeed::Layout.home_about(false)
-    Rawfeed::Layout.blog_index(false)
-    Rawfeed::Layout.tags_index(false)
-    puts "The blog has been disabled!".green
-  end
+  desc "Enable the weblog"
   task :enable do
-    Rawfeed::Layout.change_yml("defaults", "published", true, "_posts")
-    Rawfeed::Layout.change_yml("pagination", "enabled", true)
-    Rawfeed::Layout.home_about(false)
-    Rawfeed::Layout.blog_index(true)
-    Rawfeed::Layout.tags_index(true)
-    puts "The blog has been enabled!".green
+    Rawfeed::CLI.run(["blog:enable"])
+  end
+
+  desc "Disable the weblog"
+  task :disable do
+    Rawfeed::CLI.run(["blog:disable"])
   end
 end
 
-# pixels
 namespace :pixels do
-  desc "Enable/Disable pixels"
-  task :disable do
-    Rawfeed::Layout.pixels_index(false)
-    puts "The pixels has been disabled!".green
-  end
+  desc "Enable the pixel gallery"
   task :enable do
-    Rawfeed::Layout.pixels_index(true)
-    puts "The pixels has been enabled!".green
+    Rawfeed::CLI.run(["pixels:enable"])
+  end
+
+  desc "Disable the pixel gallery"
+  task :disable do
+    Rawfeed::CLI.run(["pixels:disable"])
   end
 end

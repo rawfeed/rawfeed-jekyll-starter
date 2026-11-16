@@ -4,6 +4,8 @@ author: "William C. Canin"
 text_center: true
 published: true
 permalink: / # do not change
+lang: en
+page_id: home
 ---
 
 **Hello, Welcome to rawfeed!**
